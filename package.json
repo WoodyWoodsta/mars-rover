@@ -11,5 +11,9 @@
   },
   "devDependencies": {
     "gh-pages-deploy": "^0.4.2"
+  },
+  "gh-pages-deploy": {
+    "staticpath": "www/build",
+    "noprompt": false
   }
 }
