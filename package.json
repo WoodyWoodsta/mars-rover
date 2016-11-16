@@ -1,0 +1,12 @@
+{
+  "name": "mars-rover-site-dev",
+  "version": "0.0.1",
+  "description": "Dev environment for the UCT Mars Rover project github-pages site.",
+  "main": "index.js",
+  "repository": "https://github.com/WoodyWoodsta/mars-rover.git",
+  "author": "Sean Wood <woodywoodsta@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "push-dir": "^0.2.2"
+  }
+}
