@@ -8,5 +8,8 @@
   "license": "MIT",
   "devDependencies": {
     "push-dir": "^0.2.2"
+  },
+  "scripts": {
+    "deploy": "./node_modules/push-dir/bin/push-dir.js --dir=build --branch=gh-pages --cleanup --overwrite-local"
   }
 }
