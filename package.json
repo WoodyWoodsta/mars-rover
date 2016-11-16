@@ -1,0 +1,12 @@
+{
+  "name": "mars-rover",
+  "version": "0.0.1",
+  "description": "An open Mars Curiosity Rover simulator.",
+  "main": "index.js",
+  "repository": "https://github.com/WoodyWoodsta/mars-rover.git",
+  "author": "Sean Wood <woodywoodsta@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "deploy-site": "git push origin :gh-pages && git subtree push --prefix www/build origin gh-pages"
+  }
+}
