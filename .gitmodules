@@ -7,9 +7,6 @@
 [submodule "mars-rover-rsvp-server"]
 	path = mars-rover-rsvp-server
 	url = https://github.com/WoodyWoodsta/mars-rover-rsvp-server.git
-[submodule "mars-rover-writeup"]
-	path = mars-rover-writeup
-	url = https://github.com/WoodyWoodsta/mars-rover-writeup.git
 [submodule "mars-rover-models"]
 	path = mars-rover-models
 	url = https://github.com/WoodyWoodsta/mars-rover-models.git
