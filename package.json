@@ -24,6 +24,6 @@
     "build": "concurrently --kill-others 'yarn run build-core' 'yarn run build-polymer'",
     "watch": "concurrently --kill-others 'yarn run watch-core' 'yarn run watch-polymer'",
     "deploy": "./node_modules/push-dir/bin/push-dir.js --dir=build --branch=gh-pages --cleanup --overwrite-local",
-    "serve": "http-server ./build -p 3030"
+    "serve": "http-server ./build -c-1 -p 3030"
   }
 }

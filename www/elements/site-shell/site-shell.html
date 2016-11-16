@@ -1,14 +1,26 @@
 <!-- site-shell.html -->
+<link rel="import" href="../scroll-switcher/scroll-switcher.html">
 
 <dom-module id="site-shell">
   <template>
     <style>
       :host {
-        display: block;
+        @apply --layout-fit;
+        @apply --layout-vertical;
+        @apply --layout-center;
+        @apply --layout-center-justified;
+      }
+
+      scroll-switcher {
+        @apply --layout-flex;
+
+        overflow: hidden;
       }
     </style>
 
-    Testing 123
+    <scroll-switcher>
+      <div slot="content"></div>
+    </scroll-switcher>
 
   </template>
   <script src="site-shell.js" charset="utf-8"></script>

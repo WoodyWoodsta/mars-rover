@@ -1,3 +1,5 @@
+/* site-shell.es6 */
+
 class SiteShell extends Polymer.Element {
   static get is() { return 'site-shell'; }
 
@@ -12,6 +14,5 @@ class SiteShell extends Polymer.Element {
     };
   }
 }
-
 
 customElements.define(SiteShell.is, SiteShell);
