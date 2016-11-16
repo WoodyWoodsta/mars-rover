@@ -7,6 +7,9 @@
   "author": "Sean Wood <woodywoodsta@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "deploy-site": "git push origin :gh-pages && git subtree push --prefix www/build origin gh-pages"
+    "deploy-site": "gh-pages-deploy"
+  },
+  "devDependencies": {
+    "gh-pages-deploy": "^0.4.2"
   }
 }
