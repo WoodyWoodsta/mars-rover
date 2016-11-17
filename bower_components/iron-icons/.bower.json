@@ -1,0 +1,56 @@
+{
+  "name": "iron-icons",
+  "description": "A set of icons for use with iron-icon",
+  "authors": [
+    "The Polymer Authors"
+  ],
+  "keywords": [
+    "web-components",
+    "polymer",
+    "icon"
+  ],
+  "main": "iron-icons.html",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/PolymerElements/iron-icons"
+  },
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/PolymerElements/paper-icons",
+  "dependencies": {
+    "iron-icon": "PolymerElements/iron-icon#2.0-preview",
+    "iron-iconset-svg": "PolymerElements/iron-iconset-svg#2.0-preview",
+    "polymer": "Polymer/polymer#2.0-preview"
+  },
+  "devDependencies": {
+    "paper-styles": "PolymerElements/paper-styles#2.0-preview",
+    "iron-component-page": "polymerelements/iron-component-page#1.0.0",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#2.0-preview",
+    "iron-meta": "PolymerElements/iron-meta#2.0-preview",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#v1",
+    "web-component-tester": "^4.0.0"
+  },
+  "ignore": [
+    "util",
+    "update-icons.sh"
+  ],
+  "resolutions": {
+    "iron-icon": "2.0-preview",
+    "iron-meta": "2.0-preview",
+    "iron-iconset-svg": "2.0-preview",
+    "iron-flex-layout": "2.0-preview",
+    "webcomponentsjs": "v1",
+    "polymer": "2.0-preview",
+    "paper-styles": "2.0-preview"
+  },
+  "_release": "f562c0571c",
+  "_resolution": {
+    "type": "branch",
+    "branch": "2.0-preview",
+    "commit": "f562c0571cbfd43f435e374f552fdc40d8057895"
+  },
+  "_source": "https://github.com/PolymerElements/iron-icons.git",
+  "_target": "2.0-preview",
+  "_originalSource": "PolymerElements/iron-icons",
+  "_direct": true
+}

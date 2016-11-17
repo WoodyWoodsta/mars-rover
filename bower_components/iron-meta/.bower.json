@@ -1,0 +1,45 @@
+{
+  "name": "iron-meta",
+  "keywords": [
+    "web-components",
+    "polymer"
+  ],
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "description": "Useful for sharing information across a DOM tree",
+  "private": true,
+  "authors": [
+    "The Polymer Authors"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/PolymerElements/iron-meta.git"
+  },
+  "dependencies": {
+    "polymer": "polymer/polymer#2.0-preview"
+  },
+  "devDependencies": {
+    "paper-styles": "polymerelements/paper-styles#2.0-preview",
+    "iron-component-page": "polymerelements/iron-component-page#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "test-fixture": "polymerelements/test-fixture#custom-elements-v1",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#v1"
+  },
+  "main": "iron-meta.html",
+  "ignore": [],
+  "resolutions": {
+    "paper-styles": "2.0-preview",
+    "iron-flex-layout": "2.0-preview",
+    "polymer": "2.0-preview",
+    "webcomponentsjs": "v1"
+  },
+  "homepage": "https://github.com/PolymerElements/iron-meta",
+  "_release": "4bbd39d04c",
+  "_resolution": {
+    "type": "branch",
+    "branch": "2.0-preview",
+    "commit": "4bbd39d04cfd5ab2c0213b9ef1f8ad6c37ee9b5d"
+  },
+  "_source": "https://github.com/PolymerElements/iron-meta.git",
+  "_target": "2.0-preview",
+  "_originalSource": "PolymerElements/iron-meta"
+}

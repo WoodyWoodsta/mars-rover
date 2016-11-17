@@ -1,0 +1,10 @@
+/* app.css */
+
+body {
+  margin: 0;
+  font-family: var(--app-font-family);
+  font-size: var(--app-font-size);
+  line-height: 1.5;
+  min-height: 100vh;
+  background-color: var(--app-background-color);
+}

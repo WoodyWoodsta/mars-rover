@@ -1,0 +1,48 @@
+{
+  "name": "iron-behaviors",
+  "description": "Provides a set of behaviors for the iron elements",
+  "private": true,
+  "authors": [
+    "The Polymer Authors"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/PolymerElements/iron-behaviors.git"
+  },
+  "main": [
+    "iron-button-state.html",
+    "iron-control-state.html"
+  ],
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "dependencies": {
+    "polymer": "polymer/polymer#2.0-preview",
+    "iron-a11y-keys-behavior": "polymerelements/iron-a11y-keys-behavior#2.0-preview"
+  },
+  "devDependencies": {
+    "paper-styles": "polymerelements/paper-styles#2.0-preview",
+    "iron-test-helpers": "polymerelements/iron-test-helpers#2.0-preview",
+    "iron-component-page": "polymerelements/iron-component-page#^1.0.0",
+    "test-fixture": "polymerelements/test-fixture#custom-elements-v1",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#v1"
+  },
+  "ignore": [],
+  "resolutions": {
+    "webcomponentsjs": "v1",
+    "iron-a11y-keys-behavior": "2.0-preview",
+    "test-fixture": "custom-elements-v1",
+    "polymer": "2.0-preview",
+    "paper-styles": "2.0-preview",
+    "iron-flex-layout": "2.0-preview"
+  },
+  "homepage": "https://github.com/PolymerElements/iron-behaviors",
+  "_release": "bd1fdcd82d",
+  "_resolution": {
+    "type": "branch",
+    "branch": "2.0-preview",
+    "commit": "bd1fdcd82d73ec0ab4af3dc01faa6ef85d5a20c1"
+  },
+  "_source": "https://github.com/PolymerElements/iron-behaviors.git",
+  "_target": "2.0-preview",
+  "_originalSource": "PolymerElements/iron-behaviors"
+}

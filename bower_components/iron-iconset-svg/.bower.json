@@ -1,0 +1,52 @@
+{
+  "name": "iron-iconset-svg",
+  "description": "Manages a set of svg icons",
+  "keywords": [
+    "web-components",
+    "polymer",
+    "icon"
+  ],
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "private": true,
+  "authors": [
+    "The Polymer Authors"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/PolymerElements/iron-iconset-svg.git"
+  },
+  "dependencies": {
+    "polymer": "Polymer/polymer#2.0-preview",
+    "iron-meta": "PolymerElements/iron-meta#2.0-preview"
+  },
+  "devDependencies": {
+    "paper-styles": "PolymerElements/paper-styles#2.0-preview",
+    "iron-component-page": "polymerelements/iron-component-page#^1.0.0",
+    "iron-icon": "PolymerElements/iron-icon#2.0-preview",
+    "promise-polyfill": "polymerlabs/promise-polyfill#^1.0.0",
+    "test-fixture": "PolymerElements/test-fixture#custom-elements-v1",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#v1",
+    "web-component-tester": "^4.0.0"
+  },
+  "main": "iron-iconset-svg.html",
+  "ignore": [],
+  "resolutions": {
+    "iron-meta": "2.0-preview",
+    "iron-icon": "2.0-preview",
+    "iron-flex-layout": "2.0-preview",
+    "webcomponentsjs": "v1",
+    "test-fixture": "custom-elements-v1",
+    "polymer": "2.0-preview",
+    "paper-styles": "2.0-preview"
+  },
+  "homepage": "https://github.com/PolymerElements/iron-iconset-svg",
+  "_release": "1fa235e6f7",
+  "_resolution": {
+    "type": "branch",
+    "branch": "2.0-preview",
+    "commit": "1fa235e6f77321227fe90305737be99cd5062051"
+  },
+  "_source": "https://github.com/PolymerElements/iron-iconset-svg.git",
+  "_target": "2.0-preview",
+  "_originalSource": "PolymerElements/iron-iconset-svg"
+}

@@ -1,0 +1,37 @@
+<!-- site-shell.html -->
+<link rel="import" href="../scroll-switcher/scroll-switcher.html">
+<link rel="import" href="../site-header/site-header.html">
+
+<dom-module id="site-shell">
+  <template>
+    <style>
+      :host {
+        @apply --layout-fit;
+        @apply --layout-vertical;
+        @apply --layout-center;
+        @apply --layout-center-justified;
+      }
+
+      site-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      scroll-switcher {
+        @apply --layout-flex;
+
+        overflow: hidden;
+      }
+    </style>
+
+    <site-header></site-header>
+
+    <scroll-switcher>
+      <div slot="content"></div>
+    </scroll-switcher>
+
+  </template>
+  <script src="site-shell.js" charset="utf-8"></script>
+</dom-module>
