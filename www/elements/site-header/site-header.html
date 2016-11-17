@@ -1,0 +1,29 @@
+<!-- site-header.html -->
+
+<dom-module id="site-header">
+  <template>
+    <style>
+      :host {
+        @apply --layout-horizontal;
+        @apply --layout-center;
+
+        height: var(--site-header-height, 50px);
+        padding: 0 var(--container-padding);
+      }
+
+      .spacer {
+        @apply --layout-flex;
+      }
+
+      paper-icon-button {
+        color: var(--dark-semiweak-alpha);
+      }
+    </style>
+
+    <div class="spacer"></div>
+    <a href="https://github.com/WoodyWoodsta/mars-rover" target="_blank" rel="noreferrer noopener" tabindex="-1">
+      <paper-icon-button icon="site:github"></paper-icon-button>
+    </a>
+  </template>
+  <script src="site-header.js" charset="utf-8"></script>
+</dom-module>

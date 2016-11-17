@@ -1,0 +1,48 @@
+/* theme.css */
+
+html {
+  /* Default app colors */
+  --primary-color:        #777;
+  --primary-color-dark:   #3d3d3d;
+  --primary-color-light:  #d7d7d7;
+  --accent-color:         #FF5722;
+
+  /* Default app monochromatics */
+  --light-strong-alpha:   rgba(255,255,255,1);
+  --light-medium-alpha:   rgba(255,255,255,0.7);
+  --light-normal-alpha:   rgba(255,255,255,0.38);
+  --light-semiweak-alpha: rgba(255,255,255,0.2);
+  --light-weak-alpha:     rgba(255,255,255,0.1);
+  --light-strong:         #fff;
+  --light-medium:         #b3b3b3;
+  --light-normal:         #616161;
+  --light-weak:           #1a1a1a;
+
+  --dark-strong-alpha:    rgba(0,0,0,0.87);
+  --dark-medium-alpha:    rgba(0,0,0,0.54);
+  --dark-normal-alpha:    rgba(0,0,0,0.38);
+  --dark-semiweak-alpha:  rgba(0,0,0,0.2);
+  --dark-weak-alpha:      rgba(0,0,0,0.1);
+  --dark-strong:          rgb(59, 44, 33);
+  --dark-medium:          rgb(134, 124, 117);
+  --dark-normal:          rgb(170, 163, 158);
+  --dark-semiweak:        rgb(210, 206, 204);
+  --dark-weak:            rgb(233, 231, 230);
+
+  --transparent:          rgba(0, 0, 0, 0);
+
+  /* General */
+  --app-font-size: 14px;
+  --app-font-family: 'Titillium Web', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --app-color: rgba(255,255,255,1);
+  --app-background: #f5f5f5;
+
+  --paper-font-common-base: var(--app-font-family);
+
+  --border-radius: 2px;
+  --border-radius-large: 7px;
+
+  --container-padding: 8px;
+  --element-padding: 5px;
+
+}
