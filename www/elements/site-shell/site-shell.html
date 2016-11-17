@@ -26,12 +26,29 @@
 
         overflow: hidden;
       }
+
+      #contentContainer {
+        padding: 40px var(--container-padding) var(--container-padding) var(--container-padding);
+      }
+
+      site-content {
+        transform: translateY(20px);
+
+        transition: transform 0.3s ease-out 0.6s;
+      }
+
+      scroll-switcher[viewing="content"] {
+        transform: translateY(0);
+      }
     </style>
 
     <site-header></site-header>
 
     <scroll-switcher id="scrollSwitcher">
-      <div slot="content"></div>
+      <div id="contentContainer" slot="content">
+        <site-content>
+        </site-content>
+      </div>
     </scroll-switcher>
 
   </template>

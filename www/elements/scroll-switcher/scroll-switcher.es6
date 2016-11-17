@@ -8,7 +8,7 @@ class ScrollSwitcher extends Polymer.Element {
       properties: {
         viewing: {
           type: String,
-          value: 'top',
+          value: 'cover',
           reflectToAttribute: true,
           observer: '_onViewingChanged',
         },
@@ -51,12 +51,14 @@ class ScrollSwitcher extends Polymer.Element {
     super.connectedCallback();
 
     this.$.ironResizableRelay.addEventListener('iron-resize-relay', this._onIronResize.bind(this));
+    this.$.arrowDown.addEventListener('click', this._onArrowDownClick.bind(this));
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
 
     this.$.ironResizableRelay.removeEventListener('iron-resize-relay', this._onIronResize.bind(this));
+    this.$.arrowDown.removeEventListener('click', this._onArrowDownClick.bind(this));
   }
 
   // === Private ===
@@ -112,6 +114,10 @@ class ScrollSwitcher extends Polymer.Element {
     const proximityY = 1 - (newValue.y / this.pageDimensions.height);
 
     return ((proximityX < 0.1 && proximityX > -0.1) && proximityY < 0.15);
+  }
+
+  _onArrowDownClick() {
+    this.viewing = (this.viewing === 'cover') ? 'content' : 'cover';
   }
 }
 
