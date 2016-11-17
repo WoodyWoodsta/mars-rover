@@ -1,0 +1,83 @@
+<!-- site-content.html -->
+<dom-module id="site-content">
+  <template>
+    <style>
+      :host {
+        @apply --layout-vertical;
+        @apply --layout-center;
+
+        padding: 90px var(--container-padding) var(--container-padding) var(--container-padding);
+
+        overflow: hidden;
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar:horizontal {
+        height: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: var(--light-weak-alpha);
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: var(--light-normal-alpha);
+      }
+
+      ::-webkit-scrollbar-thumb:window-inactive {
+        background: var(--light-semiweak-alpha);
+      }
+
+      iron-pages {
+        position: relative;
+        height: 100%;
+        width: 100%;
+      }
+
+      iron-pages > section {
+        height: 100%;
+      }
+
+      .page {
+        /*@apply --layout-vertical;
+        @apply --layout-center;
+        @apply --layout-flex;*/
+
+        height: 100%;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        color: var(--light-strong-alpha);
+
+        overflow: auto;
+      }
+
+      .page-inner {
+        height: 100%;
+      }
+
+    </style>
+
+    <iron-pages selected="0">
+      <section id="roverSection">
+        <div class="page">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+      </section>
+      <section id="softwareSection">
+      </section>
+    </iron-pages>
+
+
+  </template>
+  <script src="site-content.js" charset="utf-8"></script>
+</dom-module>

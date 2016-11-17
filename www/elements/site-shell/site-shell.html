@@ -28,17 +28,21 @@
       }
 
       #contentContainer {
-        padding: 40px var(--container-padding) var(--container-padding) var(--container-padding);
       }
 
       site-content {
-        transform: translateY(20px);
+        opacity: 0;
+        transform: translateY(100px);
 
-        transition: transform 0.3s ease-out 0.6s;
+        height: 100%;
+
+        transition-property: transform, opacity;
+        transition: 0.3s ease-out 0.6s;
       }
 
-      scroll-switcher[viewing="content"] {
+      scroll-switcher[viewing="content"] site-content {
         transform: translateY(0);
+        opacity: 1;
       }
     </style>
 
@@ -46,8 +50,7 @@
 
     <scroll-switcher id="scrollSwitcher">
       <div id="contentContainer" slot="content">
-        <site-content>
-        </site-content>
+        <site-content></site-content>
       </div>
     </scroll-switcher>
 
