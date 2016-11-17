@@ -9,6 +9,7 @@ class ScrollSwitcher extends Polymer.Element {
         viewing: {
           type: String,
           value: 'top',
+          reflectToAttribute: true,
           observer: '_onViewingChanged',
         },
 
@@ -34,6 +35,13 @@ class ScrollSwitcher extends Polymer.Element {
             height: 0,
           },
         },
+
+        onTheChevron: {
+          type: Boolean,
+          reflectToAttribute: true,
+          value: false,
+          computed: '_computeOnTheChevron(mousePos)',
+        },
       },
     };
   }
@@ -42,18 +50,12 @@ class ScrollSwitcher extends Polymer.Element {
   connectedCallback() {
     super.connectedCallback();
 
-    this.addEventListener('mousemove', this._onMouseMove);
-    this.addEventListener('mouseenter', this._onMouseEnter);
-    this.addEventListener('mouseleave', this._onMouseLeave);
     this.$.ironResizableRelay.addEventListener('iron-resize-relay', this._onIronResize.bind(this));
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
 
-    this.removeEventListener('mousemove', this._onMouseMove);
-    this.addEventListener('mouseenter', this._onMouseEnter);
-    this.addEventListener('mouseleave', this._onMouseLeave);
     this.$.ironResizableRelay.removeEventListener('iron-resize-relay', this._onIronResize.bind(this));
   }
 
@@ -103,6 +105,13 @@ class ScrollSwitcher extends Polymer.Element {
 
   _onMouseLeave() {
     this.mouseInside = false;
+  }
+
+  _computeOnTheChevron(newValue) {
+    const proximityX = (newValue.x - (this.pageDimensions.width / 2)) / this.pageDimensions.width;
+    const proximityY = 1 - (newValue.y / this.pageDimensions.height);
+
+    return ((proximityX < 0.1 && proximityX > -0.1) && proximityY < 0.15);
   }
 }
 
