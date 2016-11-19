@@ -7,22 +7,18 @@
   "author": "Sean Wood <woodywoodsta@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@woodywoodsta/babel-preset-browser-polymer": "^1.0.0",
-    "@woodywoodsta/babel-preset-browser-bundle": "^1.0.0",
     "babel-cli": "^6.18.0",
-    "push-dir": "^0.2.2",
+    "babel-preset-browser": "http://gitsub:8282/tooling/babel-preset-browser@^7",
     "babelify": "^7",
     "browserify": "^13",
     "concurrently": "^2",
+    "push-dir": "^0.2.2",
     "watchify": "^3"
   },
   "scripts": {
-    "build-polymer": "babel ./www --ignore ./src --presets @woodywoodsta/babel-preset-browser-polymer -d ./build --copy-files",
-    "watch-polymer": "babel ./www --ignore ./src --presets @woodywoodsta/babel-preset-browser-polymer -d ./build --copy-files -w",
-    "build-core": "browserify ./www/src/app-core.es6 -o ./build/src/app-core.js --extension=.js --extension=.json --extension=.es6 -t [ babelify --presets [ @woodywoodsta/babel-preset-browser-bundle ] --extensions .es6 ] -r ./www/src/app-core.es6:app-core",
-    "watch-core": "watchify ./www/src/app-core.es6 -o ./build/src/app-core.js -v --extension=.js --extension=.json --extension=.es6 -t [ babelify --presets [ @woodywoodsta/babel-preset-browser-bundle ] --extensions .es6 ] -r ./www/src/app-core.es6:app-core",
-    "build": "concurrently --kill-others 'yarn run build-core' 'yarn run build-polymer'",
-    "watch": "concurrently --kill-others 'yarn run watch-core' 'yarn run watch-polymer'",
+    "build": "abc",
+    "watch": "abc -w",
+    "clean": "abc -c",
     "deploy": "./node_modules/push-dir/bin/push-dir.js --dir=build --branch=gh-pages --cleanup --overwrite-local",
     "serve": "http-server ./build -c-1 -p 3030"
   }
