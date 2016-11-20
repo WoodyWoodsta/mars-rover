@@ -56,3 +56,5 @@ jspm_packages
 
 # Other
 build
+dist
+lib
