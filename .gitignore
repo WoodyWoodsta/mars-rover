@@ -58,3 +58,8 @@ jspm_packages
 build
 dist
 lib
+mars-rover-rsvp-server
+mars-rover-rsvp-client
+mars-rover-rce
+mars-rover-writeup
+mars-rover-models
