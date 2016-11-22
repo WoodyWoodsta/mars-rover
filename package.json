@@ -1,5 +1,5 @@
 {
-  "name": "mars-rover-cli",
+  "name": "uct-mars-rover",
   "version": "0.1.0",
   "description": "Installer app for the UCT Mars Rover project.",
   "repository": "https://github.com/WoodyWoodsta/mars-rover.git",
