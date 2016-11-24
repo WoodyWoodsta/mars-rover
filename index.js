@@ -44,12 +44,27 @@ program
     cloneAll();
   });
 
+program
+  .command('start-server').alias('start')
+  .description('start the RSVP Server as a forever process')
+  .action(() => {
+    _preChecks();
+    startServer();
+  });
+
+program
+  .command('stop-server').alias('stop')
+  .description('stop the RSVP Server forever process')
+  .action(() => {
+    _preChecks();
+    stopServer();
+  });
+
 program.parse(process.argv);
 
 if (program.args.length === 0) program.help();
 
 function install() {
-  // Check all projects are cloned
   clone();
 
   shell.echo(chalk.green.bold('\nInstalling projects...\n'));
@@ -75,7 +90,44 @@ function cloneAll() {
   clone();
   shell.echo(chalk.green.bold('\nCloning extra projects...\n'));
 
-  // TODO: Add other projects
+  _cloneModels();
+  _cloneWriteup();
+}
+
+function startServer() {
+  shell.echo(chalk.green.bold('\nStarting RSVP Server...\n'));
+  _checkPkgMgr();
+  _checkForever();
+
+  if (!shell.test('-d', 'mars-rover-rsvp-server')) {
+    shell.echo(chalk.red('\n   Not all of the repositories have been cloned and install. Please run \'mars-rover install\' before starting the server.'));
+    process.exit(-1);
+  }
+
+  shell.cd('mars-rover-rsvp-server');
+  if (shell.exec(`${pkgMgr} run forever`).code !== 0) {
+    shell.echo(chalk.red('\n   Failed to start the RSVP Server!'));
+    process.exit(-1);
+  } else {
+    shell.echo(chalk.green('   ✓ RSVP Server started at https://localhost:3000'));
+  }
+
+  shell.cd('..');
+}
+
+function stopServer() {
+  shell.echo(chalk.green.bold('\nStopping RSVP Server...\n'));
+  _checkForever();
+
+  shell.cd('mars-rover-rsvp-server');
+  if (shell.exec('forever stop mars-rover-rsvp-server').code !== 0) {
+    shell.echo(chalk.red('\n   Failed to stop the RSVP Server!'));
+    process.exit(-1);
+  } else {
+    shell.echo(chalk.green('   ✓ RSVP Server stopped'));
+  }
+
+  shell.cd('..');
 }
 
 // === Private ===
@@ -110,6 +162,12 @@ function _checkBower() {
   }
 }
 
+function _checkForever() {
+  if (!shell.which('forever')) {
+    shell.echo(chalk.red('\n   \'forever\' not found! Please install \'forever\' by running \'npm i -g forever\' before continuing'));
+    process.exit(-1);
+  }
+}
 
 function _cloneRSVPServer() {
   shell.echo(chalk.blue('-> Cloning \'mars-rover-rsvp-server\'...'));
@@ -144,6 +202,30 @@ function _cloneRCE() {
     }
   } else {
     shell.echo(chalk.yellow('   \'mars-rover-rce\' already cloned'));
+  }
+}
+
+function _cloneWriteup() {
+  shell.echo(chalk.blue('-> Cloning \'mars-rover-writeup\'...'));
+  if (!shell.test('-d', 'mars-rover-writeup')) {
+    if (shell.exec('git clone https://github.com/WoodyWoodsta/mars-rover-writeup.git').code !== 0) {
+      shell.echo(chalk.red('   Failed to clone \'mars-rover-writeup\'!'));
+      process.exit(-1);
+    }
+  } else {
+    shell.echo(chalk.yellow('   \'mars-rover-writeup\' already cloned'));
+  }
+}
+
+function _cloneModels() {
+  shell.echo(chalk.blue('-> Cloning \'mars-rover-models\'...'));
+  if (!shell.test('-d', 'mars-rover-models')) {
+    if (shell.exec('git clone https://github.com/WoodyWoodsta/mars-rover-models.git').code !== 0) {
+      shell.echo(chalk.red('   Failed to clone \'mars-rover-models\'!'));
+      process.exit(-1);
+    }
+  } else {
+    shell.echo(chalk.yellow('   \'mars-rover-models\' already cloned'));
   }
 }
 

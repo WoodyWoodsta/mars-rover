@@ -1,7 +1,7 @@
 {
   "name": "uct-mars-rover",
-  "version": "0.1.3",
-  "description": "Installer app for the UCT Mars Rover project.",
+  "version": "0.1.4",
+  "description": "Installer CLI for the UCT Mars Rover project.",
   "repository": "https://github.com/WoodyWoodsta/mars-rover.git",
   "author": "Sean Wood <woodywoodsta@gmail.com>",
   "license": "MIT",
