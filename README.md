@@ -38,7 +38,7 @@ or...
 yarn global add uct-mars-rover
 ```
 
-Install the mars rover projects by:
+Install the mars rover projects by running the following in a desired directory:
 
 ```shell
 mars-rover install
@@ -52,8 +52,8 @@ mars-rover start-server
 mars-rover stop-server
 ```
 
-Note that for video streaming, `kurento-media-server@6` is required, which only support Linux operating systems. It can be downloaded from [here](http://doc-kurento.readthedocs.io/en/stable/installation_guide.html) and can be started by running:
+Note that for video streaming, `kurento-media-server@6` is required, which only supports Linux operating systems. It can be downloaded from [here](http://doc-kurento.readthedocs.io/en/stable/installation_guide.html) and can be started by running:
 
 ```shell
-sudo service kurento-media-server-6.x started
+sudo service kurento-media-server-6.x start
 ```
