@@ -16,7 +16,7 @@ shell.echo(chalk.blue(chalk.bold('UCT'), 'Mars Rover installer'));
 shell.echo(chalk.blue('------------------------'));
 
 program
-  .version('0.0.1')
+  .version('0.1.4')
   .usage('[options] <command>')
   .option('-D, --debug-mode', 'do not suppress stdout');
 
